@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Allerta&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* || VARIABLES */
+
+:root {
+  /* COLORS */
+  --color_1: #FDFDFD;
+  --color_2: #4F48ED;
+  --color_3: #380F9B;
+  --color_4: #141C26;
+  --color_5: #484f57;
+  --color_6: #FFBE1A;
+  --color_7: #C41E5C;
+}
+/* || GENERAL STYLES */
+
+body {
+  font-family: "Allerta", sans-serif;
+  background-color: var(--color_1);
+  color: var(--color_4);
+}
+input,
+textarea,
+select {
+  border: 1px solid var(--color_5);
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  outline: none;
+}
+.btn {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color;
+  transition-duration: .75s linear;
+  font-weight: 400;
+  color: var(--color_1);
+}
+
+.add-btn {
+  background-color: var(--color_2);
+}
+.add-btn:hover {
+  background-color: var(--color_3);
+}
+.auth-btn{
+  background-color: var(--color_4);
+}
+.auth-btn:hover {
+  background-color: #0c1218;
+}
+.submit-btn {
+  background-color: var(--color_7);
+}
+.submit-btn:hover {
+  background-color: #b31750;
+}
