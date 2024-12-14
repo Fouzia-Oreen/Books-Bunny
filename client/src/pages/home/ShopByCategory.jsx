@@ -3,6 +3,7 @@ import { FaRegHeart } from 'react-icons/fa';
 import { categories } from '../../assets/data'
 import { GoHeartFill } from "react-icons/go";
 import { Link } from 'react-router-dom';
+import Title from '../../components/Title';
 
 
 const ShopByCategorySection = () => {
@@ -16,10 +17,13 @@ const ShopByCategorySection = () => {
 
     
   return (
-    <div className='py-12  md:py-20'>
+    <div className='py-16'>
+        {/* title & button */}
         <div className='flex justify-between items-start'>
-        <h1 className='lg:text-3xl text-2xl font-semibold mb-6'>Shop by Category</h1>
-        <button className='btn cart-btn text-sm lg:text-base'><Link to="/products">View More</Link> </button>
+        <Title title={"Shop by Category"} />
+        <button className='btn cart-btn text-sm lg:text-base'>
+            <Link to="/products">View More</Link>
+        </button>
         </div>
       
             {/* category filtering */}

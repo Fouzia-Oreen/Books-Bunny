@@ -1,19 +1,18 @@
-import  { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // import required modules
-import { Pagination, Navigation } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
 import { Link } from 'react-router-dom';
-//import { book } from '../../assets/data';
-import { FiShoppingCart } from 'react-icons/fi';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import { categories } from '../../assets/data';
 import BookCard from '../books/BookCard';
+import Title from '../../components/Title';
 
 
 const TopSellerSection = () => {
@@ -26,13 +25,11 @@ const TopSellerSection = () => {
 
     
   return (
-    <div className='py-12  md:py-20'>
-        <div className='flex justify-between items-start'>
-        <h1 className='text-3xl font-semibold mb-6'>TopSeller Books</h1>
-        <button className='btn cart-btn text-sm lg:text-base'><Link to="/products">View More</Link> </button>
-        </div>
+    <div className='py-16'>
+            {/* title */}
+           <Title title={"Top Selling Books"} />
             {/* category filtering */}
-              <div className='mb-8 flex items-center'>
+              <div className=' flex items-center'>
                 <select
                     onChange={(e) => setSelectedCategory(e.target.value)}
                     name="category" id="category" className='border bg-[#EAEAEA] border-gray-300 rounded-md px-4 py-2 focus:outline-none'>
@@ -77,7 +74,7 @@ const TopSellerSection = () => {
                   </SwiperSlide>          
                     ))
             }
-            </Swiper>            
+          </Swiper>            
     </div>         
   )
 }
